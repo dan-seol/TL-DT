@@ -15,3 +15,11 @@ conda install
 ```
 
 ## File Structure
+
+## References:
+</br> http://lybniz2.sourceforge.net/safeeval.html
+</br> How to evaluate code in string text as a python file
+</br> https://pypi.python.org/pypi/dragonfly/0.6.5
+</br> links to package dragonfly
+</br> https://pythonspot.com/speech-recognition-using-google-speech-api/
+</br> links to google speechrecognition api and how to make use of it
