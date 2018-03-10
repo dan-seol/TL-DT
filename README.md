@@ -23,3 +23,5 @@ conda install
 </br> links to package dragonfly
 </br> https://pythonspot.com/speech-recognition-using-google-speech-api/
 </br> links to google speechrecognition api and how to make use of it
+</br>https://github.com/mdbridge/Vocola-2/blob/master/releases/Vocola-2-8.zip
+</br> vocola2.
