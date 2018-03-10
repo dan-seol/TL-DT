@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
+
 # Requires PyAudio and PySpeech.
+#git clone http://people.csail.mit.edu/hubert/git/pyaudio.git
+#sudo python setup.py install
+#brew install portaudio
+#conda config --add channels conda-forge
+#conda install speechrecognition
 import speech_recognition as sr
 
 
