@@ -34,16 +34,20 @@ def recordaudio():
     # Abbreviated commands in voice to code; for example, "curly open"  should return '{'
     def lazycoder(data: str) -> str:
         str code = ""
-        # types of brackets
-        if "curly" in data:
-            code = "{"+code+"}"
-        if "parenthesis" in data:
-            code = "("+code+")"
-        if "bracket" in data:
-            code = "["+code+"]"
-        # types of arrow keys
-        if "left" in data:
-            code = code+'\x1b[A'
+         # types of brackets
+        if "curly open" in data:
+            code = code+"{"
+        if "curly close" in data:
+            code = code +"}"
+        if "paren open" in data:
+            code = "("+code
+        if "paren close" in data:
+            code = code+")"
+        if "bracket open" in data:
+            code = "["+code
+        if "bracket close" in data:
+            code = code+"]"
+        
         if "enter" in data:
             code = code+"\n"
         if "define" in data:
@@ -56,7 +60,8 @@ def recordaudio():
             code = code+"->"
         if "string" in data:
             code = code+"str"
-        if
 
+   
         return code
+ 
 
