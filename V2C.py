@@ -32,36 +32,58 @@ def recordaudio():
 
 
     # Abbreviated commands in voice to code; for example, "curly open"  should return '{'
-    def lazycoder(data: str) -> str:
-        str code = ""
+    def TLDT(data):
+
          # types of brackets
         if "curly open" in data:
-            code = code+"{"
+            data.replace("curly open","{")
         if "curly close" in data:
-            code = code +"}"
+            data.replace("curly close", "}")
         if "paren open" in data:
-            code = "("+code
+            data.replace( "paren open","(")
         if "paren close" in data:
-            code = code+")"
+            data.replace("paren close" ,")")
         if "bracket open" in data:
-            code = "["+code
+            data.replace("bracket open","[")
         if "bracket close" in data:
-            code = code+"]"
-        
-        if "enter" in data:
-            code = code+"\n"
-        if "define" in data:
-            code = code +"\n def "
-        if "argument" in data:
-            code = "("+code+")"
-        if "from" in data:
-            code = code+":"
-        if "to" in data:
-            code = code+"->"
-        if "string" in data:
-            code = code+"str"
+            data.replace("bracket open","]")
 
-   
-        return code
+        if "enter" in data:
+            data.replace("enter"+"\n")
+        if "quote" or "unquote" in data:
+            data.replace("quote", "\"")
+            data.replace("unquote", "\"")
+        if "backslash" in data:
+            data.replace("backslash", "\\")
+        if "to" in data:
+            data.replace("to",":")
+
+        #numbers
+         
+        #numerical operators
+
+        #conditionals
+
+
+        #commands for variables
+        if "string" in data:
+            data.replace("string","str")
+        if ("integer" in data):
+                data.replace("integer", "int ")
+        if "float" in data:
+                data.replace("float", "float ")
+
+        #commands to define functions
+         if "define" in data:
+             data.replace("define", "\n" + "\t" + "def")
+        return data
+
+
+    #Saving our transcribed code into a .txt file
+        def savecode(code):
+            return code
+        with open("code_transcribed.txt", "w") as out:
+            out.write(savecode(code)+"\n")
+
  
 
